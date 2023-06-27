@@ -30,7 +30,7 @@ function validate() {
     if (!input.value) {
       input.parentElement.classList.add('input-container--invalid')
       input.parentElement.querySelector('.input-alert-empty').innerText =
-        'This fiel is required'
+        'This field is required'
       validator = false
     } else if (monthIn.value > 12) {
       input.parentElement.classList.add('input-container--invalid')
