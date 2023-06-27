@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  width: 100vw;
+  height: calc(100vh - 36px);
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+  margin: 0;
+}
+/* CSS error */
+.input-container--invalid .input {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+.input-alert-empty {
+  display: none;
+}
+.input-container--invalid .input-alert-empty {
+  display: block;
+  font-size: 8px;
+  color: hsl(0, 100%, 67%);
+}

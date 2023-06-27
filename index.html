@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,100;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="'image/x-icon"
+      href="./public/image/to-favicon.png"
+    />
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="/dist/output.css" />
+    <title>App calculator age</title>
+  </head>
+  <body>
+    <main
+      class="font-poppins flex flex-col items-center justify-center max-[480px]:p-5"
+    >
+      <div>
+        <form class="flex flex-col max-[480px]:items-center">
+          <fieldset class="flex gap-3">
+            <div class="input-container">
+              <label
+                class="flex flex-col-reverse text-smokey-grey font-semibold text-xs"
+                for="dayInput"
+                >DAY</label
+              >
+              <input
+                class="input border border-light-grey outline-none text-off-black font-bold text-xl p-3 w-[120px] mt-2 hover:border-purple hover:caret-purple"
+                type="number"
+                id="dayInput"
+                placeholder="DD"
+                required
+              />
+              <span class="input-alert-empty">This field is required</span>
+            </div>
+            <div class="input-container">
+              <label
+                class="flex flex-col-reverse text-smokey-grey font-semibold text-xs"
+                for="monthInput"
+                >MONTH</label
+              >
+              <input
+                class="input input border border-light-grey outline-none text-off-black font-bold text-xl p-3 w-[120px] mt-2 hover:border-purple hover:caret-purple"
+                type="number"
+                id="monthInput"
+                placeholder="MM"
+                required
+              />
+              <span class="input-alert-empty">This field is required</span>
+            </div>
+            <div class="input-container">
+              <label
+                class="flex flex-col-reverse text-smokey-grey font-semibold text-xs"
+                for="yearInput"
+                >YEAR</label
+              >
+              <input
+                class="input input border border-light-grey outline-none font-bold text-off-black text-xl p-3 w-[120px] mt-2 hover:border-purple hover:caret-purple"
+                type="number"
+                id="yearInput"
+                placeholder="YY"
+                required
+              />
+              <span class="input-alert-empty">This field is required</span>
+            </div>
+          </fieldset>
+          <button
+            type="submit"
+            class="bg-purple w-10 h-10 rounded-full p-3 mx-3 mt-3 ml-[450px] cursor-pointer hover:bg-off-black max-[480px]:ml-0"
+            id="button"
+          >
+            <img src="./public/image/icon-arrow.svg" alt="icon arrow" />
+          </button>
+        </form>
+        <section class="flex flex-col mt-8">
+          <p class="text-off-black text-5xl font-extrabold">
+            <span class="text-purple font-extrabold text-5xl" id="yearOutput"
+              >--</span
+            >years
+          </p>
+          <p class="text-off-black text-5xl font-extrabold">
+            <span class="text-purple font-extrabold text-5xl" id="monthOutput"
+              >--</span
+            >months
+          </p>
+          <p class="text-off-black text-5xl font-extrabold">
+            <span class="text-purple font-extrabold text-5xl" id="dayOutput"
+              >--</span
+            >days
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer class="font-poppins text-center font-semibold">
+      Cristina Garcia Reyes (2023)
+    </footer>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
